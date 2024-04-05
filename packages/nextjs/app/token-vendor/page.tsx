@@ -48,17 +48,17 @@ const TokenVendor: NextPage = () => {
   // const { balance: vendorEthBalance } = useAccountBalance(vendorContractData?.address);
 
   // // tokenPerEth
-  // const { data: tokensPerEth } = useScaffoldContractRead({
-  //   contractName: "Vendor",
-  //   functionName: "tokensPerEth",
-  // });
+   const { data: tokensPerEth } = useScaffoldContractRead({
+     contractName: "Vendor",
+     functionName: "tokensPerEth",
+   });
 
   // // Buy Tokens
-  // const { writeAsync: buyTokens } = useScaffoldContractWrite({
-  //   contractName: "Vendor",
-  //   functionName: "buyTokens",
-  //   value: getTokenPrice(tokensToBuy, tokensPerEth),
-  // });
+   const { writeAsync: buyTokens } = useScaffoldContractWrite({
+     contractName: "Vendor",
+     functionName: "buyTokens",
+     value: getTokenPrice(tokensToBuy, tokensPerEth),
+   });
 
   // // Approve Tokens
   // const { writeAsync: approveTokens } = useScaffoldContractWrite({
@@ -101,7 +101,7 @@ const TokenVendor: NextPage = () => {
         </div>
 
         {/* Buy Tokens */}
-        {/* <div className="flex flex-col items-center space-y-4 bg-base-100 shadow-lg shadow-secondary border-8 border-secondary rounded-xl p-6 mt-8 w-full max-w-lg">
+         <div className="flex flex-col items-center space-y-4 bg-base-100 shadow-lg shadow-secondary border-8 border-secondary rounded-xl p-6 mt-8 w-full max-w-lg">
           <div className="text-xl">Buy tokens</div>
           <div>{tokensPerEth?.toString() || 0} tokens per ETH</div>
 
@@ -117,9 +117,9 @@ const TokenVendor: NextPage = () => {
           <button className="btn btn-secondary mt-2" onClick={() => buyTokens()}>
             Buy Tokens
           </button>
-        </div> */}
+        </div>
 
-        {!!yourTokenBalance && (
+        {/*{!!yourTokenBalance && (
           <div className="flex flex-col items-center space-y-4 bg-base-100 shadow-lg shadow-secondary border-8 border-secondary rounded-xl p-6 mt-8 w-full max-w-lg">
             <div className="text-xl">Transfer tokens</div>
             <div className="w-full flex flex-col space-y-2">
@@ -136,7 +136,7 @@ const TokenVendor: NextPage = () => {
               Send Tokens
             </button>
           </div>
-        )}
+        )} */}
 
         {/* Sell Tokens */}
         {/* {!!yourTokenBalance && (
